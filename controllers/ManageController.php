@@ -40,7 +40,7 @@ class ManageController extends BaseController
 
     public function actionIndex()
     {
-        $this->layout = '@vendor/rudderrave/yii2-yee-media/views/layouts/main';
+        $this->layout = '@vendor/rudderrave/yii2-rave-media/views/layouts/main';
 
         return $this->render('index');
     }
@@ -50,7 +50,7 @@ class ManageController extends BaseController
         $mode = Yii::$app->getRequest()->get('mode', 'normal');
 
         if ($mode == 'modal') {
-            $this->layout = '@vendor/rudderrave/yii2-yee-media/views/layouts/main';
+            $this->layout = '@vendor/rudderrave/yii2-rave-media/views/layouts/main';
         }
 
         return $this->render('uploader', [
@@ -112,11 +112,11 @@ class ManageController extends BaseController
          * @var ravesoft\media\models\Media
          */
         $model = Media::findOne(["{$tableName}.id" => $id]);
-        $message = Yii::t('yee/media', "Changes haven't been saved.");
+        $message = Yii::t('rave/media', "Changes haven't been saved.");
 
         if (User::hasPermission('editMedia')) {
             if ($model->load(Yii::$app->request->post()) && $model->save()) {
-                $message = Yii::t('yee/media', "Changes have been saved.");
+                $message = Yii::t('rave/media', "Changes have been saved.");
             }
 
             Yii::$app->session->setFlash('mediaUpdateResult', $message);

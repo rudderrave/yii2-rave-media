@@ -83,21 +83,21 @@ class FileUploader extends FileUploadUI
      *
      * @var string
      */
-    public $formView = '@vendor/ravesoft/yii2-yee-media/widgets/uploader/views/form';
+    public $formView = '@vendor/ravesoft/yii2-rave-media/widgets/uploader/views/form';
 
     /**
      * Download files view template.
      *
      * @var string
      */
-    public $uploadTemplateView = '@vendor/ravesoft/yii2-yee-media/widgets/uploader/views/upload';
+    public $uploadTemplateView = '@vendor/ravesoft/yii2-rave-media/widgets/uploader/views/upload';
 
     /**
      * Upload files view template.
      *
      * @var string
      */
-    public $downloadTemplateView = '@vendor/ravesoft/yii2-yee-media/widgets/uploader/views/download';
+    public $downloadTemplateView = '@vendor/ravesoft/yii2-rave-media/widgets/uploader/views/download';
 
     /**
      * Initializes the widget.

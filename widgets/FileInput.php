@@ -124,7 +124,7 @@ class FileInput extends InputWidget
             $this->buttonOptions['id'] = $this->options['id'] . '-btn';
         }
 
-        $this->buttonName = Yii::t('yee', 'Browse');
+        $this->buttonName = Yii::t('rave', 'Browse');
         $this->buttonOptions['role'] = 'media-launch';
         $this->resetButtonOptions['role'] = 'clear-input';
         $this->resetButtonOptions['data-clear-element-id'] = $this->options['id'];
@@ -153,7 +153,7 @@ class FileInput extends InputWidget
             );
         }
 
-        $modal = $this->renderFile('@vendor/rudderrave/yii2-yee-media/views/manage/modal.php', [
+        $modal = $this->renderFile('@vendor/rudderrave/yii2-rave-media/views/manage/modal.php', [
             'inputId' => $this->options['id'],
             'btnId' => $this->buttonOptions['id'],
             'frameId' => $this->options['id'] . '-frame',

@@ -4,7 +4,7 @@
     <div class="quick-file">
         <div class="preview" ></div>
         <div class="error text-danger"></div>
-        <div class="size"><?= \Yii::t('yee', 'Processing') ?>...</div>
+        <div class="size"><?= \Yii::t('rave', 'Processing') ?>...</div>
         <div class="progress active" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
             <div class="progress-bar progress-bar-primary" style="width:0%;"></div>
         </div>

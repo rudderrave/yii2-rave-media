@@ -18,7 +18,7 @@
                 {% } %}
             </p>
             {% if (file.error) { %}
-                <div><span class="label label-danger"><?= \Yii::t('yee', 'Error') ?></span> {%=file.error%}</div>
+                <div><span class="label label-danger"><?= \Yii::t('rave', 'Error') ?></span> {%=file.error%}</div>
             {% } %}
         </td>
         <td>
@@ -28,12 +28,12 @@
             {% if (file.deleteUrl) { %}
                 <button class="btn btn-default delete" data-type="{%=file.deleteType%}" data-url="{%=file.deleteUrl%}"{% if (file.deleteWithCredentials) { %} data-xhr-fields='{"withCredentials":true}'{% } %}>
                     <i class="glyphicon glyphicon-trash"></i>
-                    <span><?= \Yii::t('yee', 'Delete') ?></span>
+                    <span><?= \Yii::t('rave', 'Delete') ?></span>
                 </button>
             {% } else { %}
                 <button class="btn btn-default cancel">
                     <i class="glyphicon glyphicon-ban-circle"></i>
-                    <span><?= \Yii::t('yee', 'Cancel') ?></span>
+                    <span><?= \Yii::t('rave', 'Cancel') ?></span>
                 </button>
             {% } %}
         </td>

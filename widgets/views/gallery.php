@@ -37,7 +37,7 @@ GridViewAsset::register($this);
                     <thead>
                     <tr id="user-visit-log-grid-filters" class="filters">
                         <td style="width: auto;">
-                            <?= $form->field($searchModel, 'album_id')->dropDownList(ArrayHelper::merge(['' => Yii::t('yee/media', 'All Media Items')], Album::getAlbums(true, true)), ['prompt' => '']) ?>
+                            <?= $form->field($searchModel, 'album_id')->dropDownList(ArrayHelper::merge(['' => Yii::t('rave/media', 'All Media Items')], Album::getAlbums(true, true)), ['prompt' => '']) ?>
                         </td>
                         <td style="width: auto;">
                             <?= $form->field($searchModel, 'title')->textInput(['placeholder' => $searchModel->attributeLabels()['title']]) ?>
@@ -54,7 +54,7 @@ GridViewAsset::register($this);
                         </td>
                         <?php if (User::hasPermission('uploadMedia')): ?>
                             <td style="width: 1%;">
-                                <?= Html::a(Yii::t('yee/media', 'Upload New File'), ($mode == 'modal') ? ['/media/manage/uploader', 'mode' => 'modal'] : ['/media/manage/uploader'], ['class' => 'btn btn-primary pull-right']) ?>
+                                <?= Html::a(Yii::t('rave/media', 'Upload New File'), ($mode == 'modal') ? ['/media/manage/uploader', 'mode' => 'modal'] : ['/media/manage/uploader'], ['class' => 'btn btn-primary pull-right']) ?>
                             </td>
                         <?php endif; ?>
                     </tr>
@@ -102,10 +102,10 @@ GridViewAsset::register($this);
         <div class="panel panel-default">
             <div class="panel-body media-details">
                 <div class="dashboard">
-                    <h5><?= Yii::t('yee/media', 'Media Details') ?>:</h5>
+                    <h5><?= Yii::t('rave/media', 'Media Details') ?>:</h5>
 
                     <div id="fileinfo">
-                        <h6><?= Yii::t('yee/media', 'Please, select file to view details.') ?></h6>
+                        <h6><?= Yii::t('rave/media', 'Please, select file to view details.') ?></h6>
                     </div>
                 </div>
             </div>

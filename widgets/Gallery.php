@@ -2,7 +2,7 @@
 
 namespace ravesoft\media\widgets;
 
-use ravesoft\helpers\YeeHelper;
+use ravesoft\helpers\RaveHelper;
 use ravesoft\models\OwnerAccess;
 use ravesoft\models\User;
 use Yii;
@@ -27,7 +27,7 @@ class Gallery extends \yii\base\Widget
         $modelClass = $this->modelClass;
         $searchModel = $this->modelSearchClass ? new $this->modelSearchClass : null;
 
-        $restrictAccess = (YeeHelper::isImplemented($modelClass, OwnerAccess::CLASSNAME)
+        $restrictAccess = (RaveHelper::isImplemented($modelClass, OwnerAccess::CLASSNAME)
             && !User::hasPermission($modelClass::getFullAccessPermission()));
 
         $searchName = StringHelper::basename($searchModel::className());

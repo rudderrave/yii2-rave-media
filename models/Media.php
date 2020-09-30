@@ -67,20 +67,20 @@ class Media extends ActiveRecord implements OwnerAccess
     public function attributeLabels()
     {
         return [
-            'id' => Yii::t('yee', 'ID'),
-            'album_id' => Yii::t('yee/media', 'Album'),
-            'filename' => Yii::t('yee/media', 'Filename'),
-            'type' => Yii::t('yee', 'Type'),
-            'url' => Yii::t('yee', 'URL'),
-            'title' => Yii::t('yee', 'Title'),
-            'alt' => Yii::t('yee/media', 'Alt Text'),
-            'size' => Yii::t('yee', 'Size'),
-            'description' => Yii::t('yee', 'Description'),
-            'thumbs' => Yii::t('yee/media', 'Thumbnails'),
-            'created_at' => Yii::t('yee', 'Uploaded'),
-            'updated_at' => Yii::t('yee', 'Updated'),
-            'created_by' => Yii::t('yee/media', 'Uploaded By'),
-            'updated_by' => Yii::t('yee/media', 'Updated By'),
+            'id' => Yii::t('rave', 'ID'),
+            'album_id' => Yii::t('rave/media', 'Album'),
+            'filename' => Yii::t('rave/media', 'Filename'),
+            'type' => Yii::t('rave', 'Type'),
+            'url' => Yii::t('rave', 'URL'),
+            'title' => Yii::t('rave', 'Title'),
+            'alt' => Yii::t('rave/media', 'Alt Text'),
+            'size' => Yii::t('rave', 'Size'),
+            'description' => Yii::t('rave', 'Description'),
+            'thumbs' => Yii::t('rave/media', 'Thumbnails'),
+            'created_at' => Yii::t('rave', 'Uploaded'),
+            'updated_at' => Yii::t('rave', 'Updated'),
+            'created_by' => Yii::t('rave/media', 'Uploaded By'),
+            'updated_by' => Yii::t('rave/media', 'Updated By'),
         ];
     }
 
@@ -158,7 +158,7 @@ class Media extends ActiveRecord implements OwnerAccess
         }
 
         if (!empty($allowedFileTypes) && is_array($allowedFileTypes) && !in_array($this->file->type, $allowedFileTypes)) {
-            throw new \Exception(Yii::t('yee/media', 'Sorry, [{filetype}] file type is not permitted!', ['filetype' => $this->file->type]));
+            throw new \Exception(Yii::t('rave/media', 'Sorry, [{filetype}] file type is not permitted!', ['filetype' => $this->file->type]));
         }
 
         //if a file with the same name already exist append a number
@@ -332,11 +332,11 @@ class Media extends ActiveRecord implements OwnerAccess
 
         foreach ($thumbs as $alias => $url) {
             $preset = $module->thumbs[$alias];
-            $list[$url] = Yii::t('yee/media', $preset['name']) . ' ' . $preset['size'][0] . ' × ' . $preset['size'][1];
+            $list[$url] = Yii::t('rave/media', $preset['name']) . ' ' . $preset['size'][0] . ' × ' . $preset['size'][1];
         }
 
         $originalImageSize = $this->getOriginalImageSize($module->routes);
-        $list[$this->url] = Yii::t('yee/media', 'Original') . ' ' . $originalImageSize;
+        $list[$this->url] = Yii::t('rave/media', 'Original') . ' ' . $originalImageSize;
 
         return $list;
     }

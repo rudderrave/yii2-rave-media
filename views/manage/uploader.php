@@ -6,7 +6,7 @@ use yii\helpers\Html;
 /* @var $this yii\web\View */
 /* @var $searchModel ravesoft\media\models\Media */
 
-$this->title = Yii::t('yee/media', 'Upload New File');
+$this->title = Yii::t('rave/media', 'Upload New File');
 
 if ($mode !== 'modal') {
     $this->params['breadcrumbs'][] = $this->title;
@@ -17,15 +17,15 @@ if ($mode !== 'modal') {
     <div class="panel-body">
         <div id="uploadmanager">
             <p>
-                <?= Html::a('← ' . Yii::t('yee/media', 'Back to file manager'), ($mode == 'modal') ? ['manage/index', 'mode' => 'modal'] : ['default/index']) ?>
+                <?= Html::a('← ' . Yii::t('rave/media', 'Back to file manager'), ($mode == 'modal') ? ['manage/index', 'mode' => 'modal'] : ['default/index']) ?>
             </p>
 
             <?= FileUploadUI::widget([
                 'model' => $model,
                 'attribute' => 'file',
-                'formView' => '@vendor/ravesoft/yii2-yee-media/views/upload-widget/form',
-                'uploadTemplateView' => '@vendor/ravesoft/yii2-yee-media/views/upload-widget/upload',
-                'downloadTemplateView' => '@vendor/ravesoft/yii2-yee-media/views/upload-widget/download',
+                'formView' => '@vendor/ravesoft/yii2-rave-media/views/upload-widget/form',
+                'uploadTemplateView' => '@vendor/ravesoft/yii2-rave-media/views/upload-widget/upload',
+                'downloadTemplateView' => '@vendor/ravesoft/yii2-rave-media/views/upload-widget/download',
                 'clientOptions' => [
                     'autoUpload' => Yii::$app->getModule('media')->autoUpload,
                 ],

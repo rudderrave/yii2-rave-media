@@ -62,7 +62,7 @@ UploaderAsset::register($this);
         <div class="btn btn-primary fileinput-button">
             <div style="vertical-align: middle;">
                 <?= FA::icon(FA::_PLUS) ?>
-                <span><?= Yii::t('yee/media', 'Add files') ?></span>
+                <span><?= Yii::t('rave/media', 'Add files') ?></span>
                 <?= $context->model instanceof Model && $context->attribute
                 !== null ? Html::activeFileInput($context->model, $context->attribute, $context->fieldOptions) : Html::fileInput($context->name, $context->value, $context->fieldOptions);
                 ?>

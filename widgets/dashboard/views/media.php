@@ -6,7 +6,7 @@
 
     <div class="pull-<?= $position ?> col-lg-<?= $width ?> widget-height-<?= $height ?>">
         <div class="panel panel-default dw-widget">
-            <div class="panel-heading"><?= Yii::t('yee/media', 'Media Activity') ?></div>
+            <div class="panel-heading"><?= Yii::t('rave/media', 'Media Activity') ?></div>
             <div class="panel-body">
 
                 <?php if (count($recent)): ?>
@@ -19,19 +19,19 @@
                                 </div>
                                 <div class="dw-media-info">
                                     <div>
-                                        <b><?= Yii::t('yee', 'Title') ?>:</b>
+                                        <b><?= Yii::t('rave', 'Title') ?>:</b>
                                         <span><?= ($item->title) ? $item->title : Yii::t('yii', '(not set)') ?></span>
                                     </div>
                                     <div>
-                                        <b><?= Yii::t('yee/media', 'File Size') ?>:</b>
+                                        <b><?= Yii::t('rave/media', 'File Size') ?>:</b>
                                         <span><?= $item->getFileSize() ?></span>
                                     </div>
                                     <div>
-                                        <b><?= Yii::t('yee/media', 'Uploaded By') ?>:</b>
+                                        <b><?= Yii::t('rave/media', 'Uploaded By') ?>:</b>
                                         <span><?= $item->author->username ?></span>
                                     </div>
                                     <div>
-                                        <b><?= Yii::t('yee', 'Uploaded') ?>:</b>
+                                        <b><?= Yii::t('rave', 'Uploaded') ?>:</b>
                                         <span><?= $item->createdDateTime ?></span>
                                     </div>
                                 </div>
@@ -40,7 +40,7 @@
                     </div>
 
                 <?php else: ?>
-                    <h4><em><?= Yii::t('yee/media', 'No images found.') ?></em></h4>
+                    <h4><em><?= Yii::t('rave/media', 'No images found.') ?></em></h4>
                 <?php endif; ?>
 
             </div>

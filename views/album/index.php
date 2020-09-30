@@ -12,8 +12,8 @@ use yii\widgets\Pjax;
 /* @var $searchModel ravesoft\media\models\AlbumSearch */
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
-$this->title = Yii::t('yee/media', 'Albums');
-$this->params['breadcrumbs'][] = ['label' => Yii::t('yee/media', 'Media'), 'url' => ['/media/default/index']];
+$this->title = Yii::t('rave/media', 'Albums');
+$this->params['breadcrumbs'][] = ['label' => Yii::t('rave/media', 'Media'), 'url' => ['/media/default/index']];
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="album-index">
@@ -21,8 +21,8 @@ $this->params['breadcrumbs'][] = $this->title;
     <div class="row">
         <div class="col-sm-12">
             <h3 class="lte-hide-title page-title"><?= Html::encode($this->title) ?></h3>
-            <?= Html::a(Yii::t('yee', 'Add New'), ['/media/album/create'], ['class' => 'btn btn-sm btn-primary']) ?>
-            <?= Html::a(Yii::t('yee/media', 'Manage Categories'), ['/media/category/index'], ['class' => 'btn btn-sm btn-primary']) ?>
+            <?= Html::a(Yii::t('rave', 'Add New'), ['/media/album/create'], ['class' => 'btn btn-sm btn-primary']) ?>
+            <?= Html::a(Yii::t('rave/media', 'Manage Categories'), ['/media/category/index'], ['class' => 'btn btn-sm btn-primary']) ?>
         </div>
     </div>
 
@@ -43,7 +43,7 @@ $this->params['breadcrumbs'][] = $this->title;
                 'filterModel' => $searchModel,
                 'bulkActionOptions' => [
                     'gridId' => 'album-grid',
-                    'actions' => [Url::to(['bulk-delete']) => Yii::t('yee', 'Delete')],
+                    'actions' => [Url::to(['bulk-delete']) => Yii::t('rave', 'Delete')],
                 ],
                 'columns' => [
                     ['class' => 'ravesoft\grid\CheckboxColumn', 'options' => ['style' => 'width:10px']],
